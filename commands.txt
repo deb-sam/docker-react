@@ -68,3 +68,6 @@ script:
 Additionally, you may want to set the following property to the top of your .travis.yml file:
 
 language: generic 
+
+----IAM---
+AKIA4HQ27VWJSJ6CUMMC/HM1CE+KYzrQlDseuW8FREtQY7PtcR9FAJ48gWDpV
