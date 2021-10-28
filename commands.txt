@@ -52,3 +52,19 @@ docker ps
 docker image ls
 
 docker run -it -p 3000:3000 IMAGE_ID
+
+----GIT push-----
+
+goto your required folder
+ git init
+ git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/deb-sam/docker-react.git
+git push origin master
+
+
+script:
+  - docker run -e CI=true USERNAME/docker-react npm run test
+Additionally, you may want to set the following property to the top of your .travis.yml file:
+
+language: generic 
