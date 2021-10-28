@@ -1,0 +1,54 @@
+
+
+
+npx create-react-app frontend
+
+npm run test
+
+npm run build
+
+npm run start
+
+create docker dev file
+
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "run", "start"]
+
+docker build -f Dockerfile.dev -t react .
+
+docker run -it -p 3000:3000 -v /app/node_moduls
+
+docker-compose build
+
+docker run -it  react npm run test
+
+docker exec -it 8c6035c56190 npm run test
+
+docker attach 8c6035c56190 
+
+docker exec -it 8c6035c56190 sh
+
+
+web:
+    stdin_open: true
+Make sure you rebuild your containers after making this change with  docker-compose down && docker-compose up --build
+
+https://github.com/facebook/create-react-app/issues/8688
+
+https://stackoverflow.com/questions/60790696/react-scripts-start-exiting-in-docker-foreground-cmd
+
+
+
+docker ps
+
+docker image ls
+
+docker run -it -p 3000:3000 IMAGE_ID
